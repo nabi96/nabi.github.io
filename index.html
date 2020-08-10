@@ -1,74 +1,92 @@
-<!doctype HTML>
-<html> 
-<head>
-   <!-- METADATA-->
-<title>Segundo Parcial</title>
-<style>
-  body {background-color:lightslategrey}
-</style>
-<meta author= "nabi96"/>
-<meta description="Examen: Segundo Parcial"/>
-<!-- Codigo de Javascript-->
-<script src="codigo.js"></script>
-<!-- css o estilos-->
-<link rel="stylsheet" href="estilos.css"/>
-
-<style type="text/css">
-form {
-margin: 0 auto;
-width: 800px;
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practica Final</title>
+        <style>
+            body{color: ghostwhite;
+                background-color: rgb(0, 45, 248);
+                padding: 5%;
+                background: url(https://cdn.slashgear.com/wp-content/uploads/2020/04/star-wars-backgrounds-14.jpg);}
+            #Panel{background-color: rgb(0, 0, 0);
+            background: url(https://png.pngtree.com/thumb_back/fw800/back_our/20190620/ourmid/pngtree-blue-fashion-cyber-security-everyone-is-responsible-for-company-forum-business-image_171222.jpg);
+                    height: 400px;
+                    width: 300px;
+                    box-shadow: 10px 10px black;
+                    padding: .5%;
+                    }
+                    input[type=button], input[type=submit], input[type=reset] {
+    background-color: #ffffff;
+    border: none;
+    color: rgb(0, 8, 51);
+    padding: 1px 1px;
+    font-size: 16px;
+    min-width: 21%;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
 }
+        </style>
+    </head>
+    <body>
+       <center>
 
-ul, ol {
-padding: 0;
-margin: 0;
-}
+        
+           
+        <div id="Panel">
+            <form name="Calculadora">
+                <h2>Calculadora</h2>
+                <input type="textfield" name="Resultado" value="">
+                <br><br>
+                <input type="button" value="1" onClick="document.Calculadora.Resultado.value+='1'">
+                <input type="button" value="2" onClick="document.Calculadora.Resultado.value+='2'">
+                <input type="button" value="3" onClick="document.Calculadora.Resultado.value+='3'">
+                <input type="button" value="*" onClick="document.Calculadora.Resultado.value+='*'">
+                <br>
+                <input type="button" value="4" onClick="document.Calculadora.Resultado.value+='4'">
+                <input type="button" value="5" onClick="document.Calculadora.Resultado.value+='5'">
+                <input type="button" value="6" onClick="document.Calculadora.Resultado.value+='6'">
+                <input type="button" value="/" onClick="document.Calculadora.Resultado.value+='/'">
+                <br>
+                <input type="button" value="7" onClick="document.Calculadora.Resultado.value+='7'">
+                <input type="button" value="8" onClick="document.Calculadora.Resultado.value+='8'">
+                <input type="button" value="9" onClick="document.Calculadora.Resultado.value+='9'">
+                <input type="button" value="-" onClick="document.Calculadora.Resultado.value+='-'">
+                <br>
+                <input type="reset" value="c">
+                <input type="button" value="0" onClick="document.Calculadora.Resultado.value+='0'">
+                <input type="button" value="=" onClick="document.Calculadora.Resultado.value=eval(document.Calculadora.Resultado.value)">
+                <input type="button" value="+" onClick="document.Calculadora.Resultado.value+='+'">
+                
+                </form>
 
-ol > li {
-list-style-position: inside;
-border: 2px solid;
-padding: 12px;
-margin: 12px;
-font-family: Georgia, serif;
-font-size: 15px;
-font-weight: bold;
-color:navy;
-}
+            <h2>Iniciar Sesion</h2>
 
-ul li {
-list-style-type: none;
-color:black;
-}
-</style>
-</head>
-<body>
-<form action="" method="post">
-
-<ol>
-<li>Nos vamos a graduar como Ing en sistemas?
-  <ul>
-  <li><input type="radio" name="preg1" value="1" /> Verdadero</li>
-  <li><input type="radio" name="preg1" value="2" /> Falso</li>
-  
-  </ul>
-</li>
-
-<li>Crees que CEDUK es una buena escuela?
-  <ul>
-    <li><input type="radio" name="preg1" value="1" /> Verdadero</li>
-    <li><input type="radio" name="preg1" value="2" /> Falso</li>
-    </ul>
-</li>
+            <br>
+            <input type="text" id="Usuario" name="Usuario" placeholder="Usuario" />
+            <br>
+            <input type="password" id="Password" name="Password" placeholder="Password" />
+            <br><br>
+            <button onclick="IniciarSesion()">Iniciar Sesión</button>
+<br>
 
 
-<li>Crees que el profesor Juan Carlos el chido en programacion?
-  <ul>
-    <li><input type="radio" name="preg1" value="1" /> Verdadero</li>
-    <li><input type="radio" name="preg1" value="2" /> Verdadero</li>
-    </ul>
-</li>
-</ol>
+        </center>
+        <script>
 
-</form>
-</body>
+            function IniciarSesion(){
+                var varUsuario, varPassword;
+                varUsuario = document.getElementById("Usuario").value;
+                varPassword = document.getElementById("Password").value;
+                if(varUsuario == "ceduk" && varPassword == "covid19")
+                {
+                    window.location.href ="https://www.youtube.com/user/CEDUKprepa";
+                }
+                else
+                {
+                    alert("El usuario o la contraseña son incorrectos");
+                }
+            }
+
+                    </script>
+    </body>
 </html>
